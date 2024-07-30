@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^12.1.0",
     "express": "^4.19.2",
     "nodemailer": "^6.9.14"
   },
