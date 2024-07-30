@@ -1,10 +1,7 @@
 import { app } from "./app";
-import { Command } from 'commander';
-const program = new Command();
+import { argv } from "node:process";
 
-program
-.option('-p, --port <number>', 'Api port server', '3333');
-program.parse();
-
-const options = program.opts();
-app.listen(options.port, () => console.log(`Server is running on port ${options.port}! 🚀`));
+const port = argv?.[argv.length - 1] ?? '3333'
+app.listen(port, () =>
+  console.log(`Server is running on port ${port}! 🚀`)
+);
